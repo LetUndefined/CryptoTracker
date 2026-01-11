@@ -1,0 +1,16 @@
+<script setup lang="ts">
+interface Props {
+  message?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  message: 'Loading...'
+})
+</script>
+
+<template>
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>{{ message }}</p>
+  </div>
+</template>
